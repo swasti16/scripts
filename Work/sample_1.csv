@@ -1,0 +1,8 @@
+Ethernet Test,All Tests,2
+Ethernet Test,MAC LoopBack,3
+Ethernet Test,"mac LoopBack,PHY LoopBack",1
+I2C Test,"I2C loopback test,I2C bus scan test",2
+I2C Test,All tests,1
+Uart test,port_test_case,4
+Uart test,UART LoopBack test,3
+Uart test,"Uart Baud Rate test,UART Transmit test",3
