@@ -1,0 +1,19 @@
+Usage:
+
+report_generation.py -d DIR -e FILE_EXT -o OUTPUT_FORMAT
+                           (-f FAIL_STRING | -file FAIL_FILE)
+
+DIR-------------Directory in which we need to search fail string recursively in all folders.
+FILE_EXT--------File extension to be searched in DIR
+OUTPUT_FORMAT---The desired format of report generation.
+FAIL_STRING-----Failure string to be searched in all file with FILE_EXT
+FAIL_FILE-------File which contains multiple failure strings to be searched in all file with FILE_EXT
+
+Note: Provide either FAIL_STRING or FAIL_FILE.
+
+
+Prerequisites:
+
+This requires following python packages:
+argparse --   sudo apt-get install python-argparse
+xlwt     --   sudo apt-get install python-xlwt
