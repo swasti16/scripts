@@ -45,16 +45,17 @@ def generate_test_result():
     for file_name in file_list:
         test_name = find_test_name(file_name, args.file_ext)
         sheet1.write(row, 0, test_name)
-        result = get_test_result(file_name, "numpy")
+        result = get_test_result(file_name, args.fail_string)
         print test_name, result
         sheet1.write(row, 1, result)
         row = row + 1
     book.save("test_result.xls")
 
-parser = argparse.ArgumentParser(description="Extract test case names")
+
+parser = argparse.ArgumentParser(description="Generates Report")
 parser.add_argument("-d", "--dir", default="dir", required=True)
 parser.add_argument("-e", "--file_ext", default=".OUTPUT")
-parser.add_argument("-o", "--output_format", default="csv")
+# parser.add_argument("-o", "--output_format", default="xls")
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("-f", "--fail_string", default="Failed")
 group.add_argument("-file", "--fail_file")
